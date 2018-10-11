@@ -1,0 +1,49 @@
+Adding the following Extensions to easy development
+====================================================================
+
+Changed default Editor Word Wrap to true
+
+====================================================================
+User Settings
+{
+    "editor.tabSize": 2,
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "workbench.colorTheme": "Visual Studio Dark",
+    "terminal.integrated.shell.windows": "cmd.exe",
+    "terminal.integrated.shellArgs.windows": [
+        "/k", "C:\\Users\\au5720.SYS-ISE\\js\\cmder\\vendor\\init.bat"
+    ],
+    "editor.wordWrap": "on",
+    "emmet.includeLanguages": {"javascript":"javascriptreact"}, 
+    "emmet.syntaxProfiles": {"javascript":"jsx"},
+    "editor.formatOnSave": true
+}
+Extensions
+VS Code ES7 React/Redux/React-Native/JS snippets
+Bracket Pair Colorizer
+Prettier formatter for Visual Studio Code
+Live Server
+Node.js Modules Intellisense
+
+====================================================================
+
+Setup a database user on the local MongoDB
+
+db.createUser(
+  {
+    user: "dbuser",
+    pwd: "dbuser",
+    roles: [ { role: "readWrite", db: "devconnector" },
+             { role: "read", db: "reporting" } ]
+  }
+)
+
+"c:\Program Files\MongoDB\Server\4.0\bin\mongo.exe" --port 27017 -u "dbuser" -p "dbuser" --authenticationDatabase "devconnector"
+
+====================================================================
+Production
+npm init
+npm i express mongoose passport passport-jwt jsonwebtoken body-parser bcryptjs validator
+Development
+npm install --save-dev nodemon
